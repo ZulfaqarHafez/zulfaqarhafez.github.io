@@ -1,154 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zulfaqar Hafez Portfolio Website</title>
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.8/normalize.min.css">
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-        integrity="sha256-469ynGAKLSFpVbEBog43gvNhfr0j+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-
-        <!-- update with own fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans +Pro:30,980&display-swap" rel="stylesheet">
-
-        <!-- link to css  -->
-        <link rel="stylesheet" href="web.css">
-        <link rel="stylesheet" href="style.css">
-
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="img/logo_transparent.png" alt="">
-            </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zulfaqar Hafez Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <!-- Introduction -->
+    <main>
+        <!-- Introduction Section -->
         <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Hi, I am <strong>Zulfaqar Hafez</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Aspiring Data Analyst</p>
-            <img src="img/zul_2.jpg" alt="a picture of Zulfaqar Hafez smiling" class="intro__img">
+            <div class="container intro-container">
+                <div class="intro-text">
+                    <h1>Greetings, I am <strong>Zulfaqar Hafez</strong></h1>
+                    <p class="typing-animation">AAI freshman at Singapore Institute of Technology (SIT)</p>                </div>
+                <img src="img/zul_2.jpg" alt="Zulfaqar Hafez" class="intro__img">
+            </div>
         </section>
 
-        <!-- My services-->
+        <!-- Services Section -->
         <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
-
-                <div class="service">
-                    <h3>Data Analytics</h3>
-                    <p>Data cleansing experience in Excel or Python (Pandas) with visualization of cleansed data in a Tableau dashboard or 
-                        Python dashboard using Matplotlib or similar Python libraries. 
-                        <br>Especially committed to creating a beautiful and intuitive dashboard for gaining insights on</p>
-                    <p><strong>Skills</strong>: Python, Tableau, Excel, Data Visualization</p>
-                </div> <!--close service-->
-
-                <div class="service">
-                    <h3>Web Scraping</h3>
-                    <p>Using Python libraries like Selenium and Beautiful Soup to build bots that automate data retrieval from websites.Bots of this type are used to automate processes or to retrieve information.
-                        <br>I'm particularly interested in using
-                        Web Scraping to automate mundane tasks like gathering specific news or data so that I can help people have more time for other things.</p>
-                    <p><strong>Skills</strong>:Javascript, Python, Web Scraping, HTML</p>
-                </div> <!--close service-->
-
-                <div class="service">
-                    <h3>Machine Learning</h3>
-                    <p>From data labeling to model training, I'm interested in and learning how to efficiently train my model to achieve the highest 
-                        recall and precision while also evaluating how the AI learns. 
-                        <br>I enjoy machine learning because it allows me to create something 
-                        intelligent that will benefit those around me. Right now, I'm actively learning AI.</p>
-                    <p><strong>Skills</strong>: Python,YoloV5,Tensorflow</p>
-                </div> <!--close service-->
-
-            </div><!--close service-->
-            <a href="#work" class="btn">My Work</a>
-        </section>
-
-        <!-- About me -->
-        <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about"> Aspiring Data Analyst with big ideas</p>
-
-            <div class="about-me__body">
-                <p>In love with learning new things, I will do self exploration of things be it in programming or in life. I'm someone who believes in seizing every opportunity that's thrown to me which i believe is my strength.</p>
-                <p>My professional interests are in Data analytics and Artificial Intelligence where i would constantly learn new things and creating mini projects during my free time.</p>
-                <p>"If i could learn it, i could conquer it" is a quote i live by everyday.</p>
-            </div>
-            <img src="img/zul_5.jpg" alt="Zul leaning" class="about--me__img">
-        </section>
-
-        <!-- My Work -->
-        <section class="my-work" id="work">
-            <h2 class="section__title  section__title--work">My Work</h2>
-            <P class="section__subtitle section__subtitle--work">A selection of my range of work</P>
-
-            <div class="portfolio">
-                <!--portfolio imgae 01-->
-                <a href="https://github.com/syalabil/ppecomputervision" target="_blank" class="portfolio__item">
-                    <img src="img/Carapace.png" alt="" style="width: 100%;" class="portfolio__img">
-                </a>
-
-                 <!--portfolio imgae 02-->
-                 <a href="https://youtu.be/tJq8JTyhZX8" target="_blank" class="portfolio__item">
-                    <img src="img/BeCarefall.jpg" alt="" style="width: 100%;" class="portfolio__img">
-                </a>
-
-                 <!--portfolio imgae 03-->
-                 <a href="#" class="portfolio__item">
-                    <img src="img/logo.png" alt="" class="portfolio__img">
-                </a>
-
-                 <!--portfolio imgae 04-->
-                 <a href="#" class="portfolio__item">
-                    <img src="img/logo.png" alt="" class="portfolio__img">
-                </a>
+            <div class="container">
+                <h2 class="section__title">What does Zulf do?</h2>
+                <div class="service-grid">
+                    <div class="service">
+                        <i class="fas fa-database service-icon"></i>
+                        <h3>Data Analytics</h3>
+                        <p>Using Python for data cleansing and analytics and Tableau to turn data into beautiful dashboards.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-code service-icon"></i>
+                        <h3>Web Development</h3>
+                        <p>Building responsive and dynamic websites using flask & DJango.</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-brain service-icon"></i>
+                        <h3>Machine Learning</h3>
+                        <p>Building predictive models with Python tools like scikit-learn and TensorFlow.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <!--my email address-->
-            <a href="mailto:zulfaqarhafez@gmail.com" class="footer__link">zulfaqarhafez@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/zulfaqarhafez/">
-                        <!-- <i class="fa-brands fa-linkedin" style=" color: #3b5998;"></i>-->
-                            <i class="fa-brands fa-linkedin" ></i>
-                    </a> 
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/zulfaqarhafez/">
-                        <i class="fa-brands fa-linkedin" ></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/zulfaqarhafez/">
-                        <i class="fa-brands fa-linkedin" ></i>
-                    </a>
-                </li>
-                 <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/zulfaqarhafez/">
-                        <i class="fa-brands fa-linkedin" ></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about-title">About Me</div> <!-- Added a class for styling -->
+            <div class="container about-container">
+                <div class="about-content">
+                    <h2>Interests</h2>
+                    <p>A passionate Data Analyst with a strong passion for technology and data. I enjoy exploring the intersection of these fields to solve complex problems. In my free time, I am also an avid gym-goer, Pokémon card collector, and a lover of learning new magic tricks.</p>
+                </div>
+                <img src="img/zul_1.jpg" alt="Zulfaqar Hafez" class="about-image">
+            </div>
+            <div class="container about-container">
+                <div class="about-content">
+                    <h2>Current School</h2>
+                    <p>I am currently pursuing a Bachelor's degree in Applied Artificial Intelligence at the Singapore Institute of Technology. This program allows me to implement what I have learned in AI and Data Analytics, while further improving my skills through various projects and hackathons.</p>
+                </div>
+                <img src="img/zul_sit.jpg" alt="Zulfaqar Hafez" class="about-image">
+            </div>
+        </section>
+        
 
-        <script src="index.js"></script>
-    </body>
+        <!-- Work Section -->
+        <section class="work" id="work">
+            <h2>My Work</h2>
+            <div class="project-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="img/Carapace.png" alt="Carapace AI">
+                    <div class="project-details">
+                        <h3>Carapace AI</h3>
+                        <p>AI-driven platform focused on object detection of personal protection equipment(PPE)</p>
+                        <a href="https://github.com/syalabil/ppecomputervision" class="project-link">Project Carapace</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="img/BeCarefall.jpg" alt="BeCarefall AI">
+                    <div class="project-details">
+                        <h3>BeCarefall AI</h3>
+                        <p>AI technology designed for fall detection to ensure safety.</p>
+                        <a href="https://youtu.be/tJq8JTyhZX8" class="project-link">BeCarefall AI</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact me at <a href="mailto:zulfaqarhafez@gmail.com">zulfaqarhafez@gmail.com</a></p>
+        <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/zulfaqarhafez" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/zulfaqarhafez" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    
+
+    <script src="js/index.js"></script>
+</body>
 </html>
