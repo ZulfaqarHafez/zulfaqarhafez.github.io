@@ -1,0 +1,305 @@
+/* Base Styles */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f4f6f8;
+    background-color: #1c2833;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #263238;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    margin: 0 10px;
+}
+
+.nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav__link:hover {
+    background-color: #546e7a;
+}
+
+/* Intro Section */
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 0px 20px;
+    gap: 70px;
+}
+
+.typing-animation {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #76d7c4; /* Customize the color as needed */
+    white-space: nowrap; /* Keep the text on one line for the typing effect */
+    overflow: hidden;
+    border-right: 2px solid #76d7c4; /* Cursor effect */
+    display: inline-block;
+    width: 100%; /* Allow full container width */
+    animation: typing 3s steps(30, end), blink 0.9s step-end infinite;
+}
+
+/* Ensure the text wraps at the container width */
+.intro-text {
+    max-width: 600px; /* Adjust the width as per your design */
+    word-wrap: break-word; /* Allow the text to break into a new line if needed */
+}
+
+.intro__img {
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 0;
+    border: 3px solid #76d7c4;
+    object-fit: cover;
+}
+
+/* Typing Animation Keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Services Section */
+.my-services {
+    padding: 40px 20px;
+}
+
+.my-services .section__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #f4f6f8;
+    font-weight: bold;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background: #2e4053;
+    border: 1px solid #34495e;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* About Section */
+.about-title {
+    font-size: 2.5rem; /* Bigger text size for "About Me" */
+    color: #f4f6f8; /* Light color for readability */
+    font-weight: bold; /* Make it stand out */
+    text-align: center; /* Center the text */
+    margin-bottom: 40px; /* Adjust margin to create spacing below */
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Align the items vertically */
+    gap: 20px; /* Add some space between the text and the image */
+    padding: 40px 20px;
+}
+.about-image {
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    border: 3px solid #76d7c4; /* Keep the border color */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-image:hover {
+    transform: translateY(-5px); /* Moves the image up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increases the shadow */
+}
+
+.about-content {
+    max-width: 600px; /* Limit the width of the text */
+    text-align: left; /* Align text to the left */
+    font-size: 1.2rem; /* Increase text size for better readability */
+    line-height: 1.8; /* Add line spacing */
+}
+
+.about-content p {
+    color: #f4f6f8; /* Light color for the text */
+    margin-top: 20px; /* Add space above the paragraph */
+}
+
+
+/* Work Section */
+.work {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.work h2 {
+    font-size: 2rem;
+    color: #f4f6f8;
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #2e4053;
+    border: 1px solid #34495e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.project-details h3 {
+    font-size: 1.5rem;
+    color: #76d7c4;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 1rem;
+    color: #f4f6f8;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: #76d7c4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+footer {
+    background-color: #263238;
+    color: #f4f6f8;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p a {
+    color: #76d7c4; /* Set a brighter color for Gmail link */
+    text-decoration: none;
+}
+
+footer div a i.fab {
+    color: inherit; /* Inherit text color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+footer div a i.fab.fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+footer div a i.fab.fa-github {
+    color: purple; /* GitHub black */
+}
+
+footer div a i.fab.fa-twitter {
+    color: #1DA1F2; /* Twitter blue */
+}
+
+
+/* Optional: Hover effect to make icons a bit lighter */
+footer p a:hover i {
+    opacity: 0.8;
+    color: #ffffff; /* Make it white on hover */
+}
+footer .footer-social-links {
+    margin-top: 10px;
+}
+
+footer .footer-social-links a {
+    color: #76d7c4;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+footer .footer-social-links a:hover {
+    color: #ffffff;
+}
+
