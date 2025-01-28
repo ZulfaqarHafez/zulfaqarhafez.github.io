@@ -3,53 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zulfaqar Hafez Portfolio Website</title>
+    <title>Zulfaqar Hafez - Data Analyst & AI Enthusiast</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container header-container">
+    <div class="cursor"></div>
+    <header class="header">
+        <div class="container">
             <nav class="nav">
+                <a href="#home" class="nav__brand">ZH</a>
+                <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                 </ul>
+                <button class="theme-toggle" aria-label="toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Introduction Section -->
         <section class="intro" id="home">
-            <div class="container intro-container">
-                <div class="intro-text">
-                    <h1>Greetings, I am <strong>Zulfaqar Hafez</strong></h1>
-                    <p class="typing-animation">AAI freshman at Singapore Institute of Technology (SIT)</p>                </div>
-                <img src="img/zul_2.jpg" alt="Zulfaqar Hafez" class="intro__img">
+            <div class="container">
+                <div class="intro-content" data-aos="fade-up">
+                    <div class="intro-text">
+                        <h1>Greetings, I am <strong class="highlight">Zulfaqar Hafez</strong></h1>
+                        <p id="typing-animation" class="typing-animation"></p>
+                        <a href="#work" class="cta-button">View My Work</a>
+                    </div>
+                    <div class="intro-image">
+                        <img src="img/zul_2.jpg" alt="Zulfaqar Hafez" class="profile-img">
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-container">
+                <img src="img/pikachu.png" alt="Pikachu" class="pokemon pikachu">
+                <img src="img/charmander.png" alt="Charmander" class="pokemon charmander">
+                <img src="img/squirtle.png" alt="Squirtle" class="pokemon squirtle">
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="my-services" id="services">
+        <section class="services" id="services">
             <div class="container">
-                <h2 class="section__title">What does Zulf do?</h2>
-                <div class="service-grid">
-                    <div class="service">
+                <h2 class="section-title" data-aos="fade-down">What does Zulf do?</h2>
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <i class="fas fa-database service-icon"></i>
                         <h3>Data Analytics</h3>
                         <p>Using Python for data cleansing and analytics and Tableau to turn data into beautiful dashboards.</p>
                     </div>
-                    <div class="service">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <i class="fas fa-code service-icon"></i>
                         <h3>Web Development</h3>
-                        <p>Building responsive and dynamic websites using flask & DJango.</p>
+                        <p>Building responsive and dynamic websites using Flask & Django.</p>
                     </div>
-                    <div class="service">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                         <i class="fas fa-brain service-icon"></i>
                         <h3>Machine Learning</h3>
                         <p>Building predictive models with Python tools like scikit-learn and TensorFlow.</p>
@@ -58,63 +76,84 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section class="about" id="about">
-            <div class="about-title">About Me</div> <!-- Added a class for styling -->
-            <div class="container about-container">
-                <div class="about-content">
-                    <h2>Interests</h2>
-                    <p>A passionate Data Analyst with a strong passion for technology and data. I enjoy exploring the intersection of these fields to solve complex problems. In my free time, I am also an avid gym-goer, Pokémon card collector, and a lover of learning new magic tricks.</p>
-                </div>
-                <img src="img/zul_1.jpg" alt="Zulfaqar Hafez" class="about-image">
-            </div>
-            <div class="container about-container">
-                <div class="about-content">
-                    <h2>Current School</h2>
-                    <p>I am currently pursuing a Bachelor's degree in Applied Artificial Intelligence at the Singapore Institute of Technology. This program allows me to implement what I have learned in AI and Data Analytics, while further improving my skills through various projects and hackathons.</p>
-                </div>
-                <img src="img/zul_sit.jpg" alt="Zulfaqar Hafez" class="about-image">
-            </div>
-        </section>
-        
-
-        <!-- Work Section -->
-        <section class="work" id="work">
-            <h2>My Work</h2>
-            <div class="project-container">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="img/Carapace.png" alt="Carapace AI">
-                    <div class="project-details">
-                        <h3>Carapace AI</h3>
-                        <p>AI-driven platform focused on object detection of personal protection equipment(PPE)</p>
-                        <a href="https://github.com/syalabil/ppecomputervision" class="project-link">Project Carapace</a>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-down">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-item" data-aos="fade-right">
+                        <div class="about-content">
+                            <h3>Interests</h3>
+                            <p>A passionate Data Analyst with a strong passion for technology and data. I enjoy exploring the intersection of these fields to solve complex problems. In my free time, I am also an avid gym-goer, Pokémon card collector, and a lover of learning new magic tricks.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="img/zul_1.jpg" alt="Zulfaqar Hafez" class="about-img">
+                        </div>
+                    </div>
+                    <div class="about-item reverse" data-aos="fade-left">
+                        <div class="about-content">
+                            <h3>Current School</h3>
+                            <p>I am currently pursuing a Bachelor's degree in Applied Artificial Intelligence at the Singapore Institute of Technology. This program allows me to implement what I have learned in AI and Data Analytics, while further improving my skills through various projects and hackathons.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="img/zul_sit.jpg" alt="Zulfaqar at SIT" class="about-img">
+                        </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="img/BeCarefall.jpg" alt="BeCarefall AI">
-                    <div class="project-details">
-                        <h3>BeCarefall AI</h3>
-                        <p>AI technology designed for fall detection to ensure safety.</p>
-                        <a href="https://youtu.be/tJq8JTyhZX8" class="project-link">BeCarefall AI</a>
+            </div>
+        </section>
+
+        <section class="work" id="work">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-down">My Work</h2>
+                <div class="work-grid">
+                    <div class="work-card" data-aos="flip-left">
+                        <div class="work-image">
+                            <img src="img/Carapace.png" alt="Carapace AI">
+                        </div>
+                        <div class="work-content">
+                            <h3>Carapace AI</h3>
+                            <p>AI-driven platform focused on object detection of personal protection equipment (PPE).</p>
+                            <a href="https://github.com/syalabil/ppecomputervision" class="work-link" target="_blank" rel="noopener noreferrer">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work-card" data-aos="flip-right">
+                        <div class="work-image">
+                            <img src="img/BeCarefall.jpg" alt="BeCarefall AI">
+                        </div>
+                        <div class="work-content">
+                            <h3>BeCarefall AI</h3>
+                            <p>AI technology designed for fall detection to ensure safety.</p>
+                            <a href="https://youtu.be/tJq8JTyhZX8" class="work-link" target="_blank" rel="noopener noreferrer">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>Contact me at <a href="mailto:zulfaqarhafez@gmail.com">zulfaqarhafez@gmail.com</a></p>
-        <div class="footer-social-links">
-            <a href="https://www.linkedin.com/in/zulfaqarhafez" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/zulfaqarhafez" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <p>Contact me at <a href="mailto:zulfaqarhafez@gmail.com">zulfaqarhafez@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/zulfaqarhafez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/zulfaqarhafez" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
         </div>
     </footer>
-    
 
-    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
+
